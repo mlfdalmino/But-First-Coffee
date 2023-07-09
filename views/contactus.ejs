@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>But First, Coffee</title>
+    
+    <link rel="icon" type="image/x-icon" href="/image/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<style>
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #FFFFCC !important;
+    }
+
+    .navbar-brand:hover {
+        color: #FFFFCC !important;
+    }
+
+    /* Additional custom styles for the contact form */
+    .container {
+        margin-top: 50px;
+        background-color: #FFFFCC;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .form-group label {
+        color: #3D2C1A;
+        font-weight: bold;
+    }
+
+    .form-control {
+        border-radius: 0;
+    }
+
+    .btn-primary {
+        background-color: #3D2C1A;
+        border-color: #3D2C1A;
+    }
+
+    .btn-primary:hover {
+        background-color: black;
+        border-color: #FFFFCC;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3D2C1A;">
+        <a class="navbar-brand ml-3" href="#" style="color: #FFFFFF; font-weight: bold;">
+            <img src="/image/logo.png" width="30" height="30" alt="">
+            But First, Coffee
+        </a>
+        <button class="navbar-toggler" style="background-color: #FFFFCC;" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="/index" style="color: #FFFFFF; font-family: sans-serif; font-weight: bold;">
+                        <i class="fa-solid fa-house"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="/order" style="color: #FFFFFF; font-family: sans-serif; font-weight: bold;">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="/about" style="color: #FFFFFF; font-family: sans-serif; font-weight: bold;">
+                        <i class="fa-solid fa-circle-info"></i> About
+                    </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="/contactus" style="color: #FFFFFF; font-family: sans-serif; font-weight: bold;">
+                        <i class="fa-solid fa-address-book"></i> Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+    <div class="container">
+        <br>
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form method="POST" action="/contactus">
+                    <div class="form-group">
+                      <br><br>
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="coffee">Branch:</label>
+                        <select class="form-control" name="branch" id="branch" required>
+                          <option disabled selected value>Select a branch</option>
+                          <option value="Makati">Makati</option>
+                          <option value="Manila">Manila</option>
+                          <option value="Pasay">Pasay</option>
+                          <option value="Pasig">Pasig</option>
+                          <option value="San Juan">San Juan</option>
+                        </select>
+                      </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" rows="5" name="message" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+              <br><br>
+                    <p class="ml-5" style="font-weight: bold;">Email: butfirstcoffee@gmail.com</p>
+                    <p class="ml-5" style="font-weight: bold;">Phone: +1 123-456-7890</p>
+                    <p class="ml-5" style="font-weight: bold;">Location: 123 Coffee Street, City, Country</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d573.9286351093106!2d121.02513153069157!3d14.603846270166885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1686554728376!5m2!1sen!2sph" width="100%" height="300" style="border: 1px solid;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <br><br><br><br><br>
+    </div>
+
+    <br><br><br><br>
+
+    <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: #3D2C1A;">
+            <a class="text-light" href="">© 2020 But First, Coffee</a>
+        </div>
+    </footer>
+</body>
+</html>
